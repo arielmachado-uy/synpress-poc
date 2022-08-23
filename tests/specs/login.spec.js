@@ -1,6 +1,5 @@
 describe('Test User Login', () => {
 
-    
     it('Connects with Metamask', () => {
         cy.visit('https://www.getfrontrunner.com/')
         cy.get('h1')
