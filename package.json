@@ -1,0 +1,18 @@
+{
+  "name": "synpress-poc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/arielmachado-uy/synpress-poc.git",
+  "author": "Ariel Machado <arielma77@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "env-cmd -f .env npx synpress run -cf synpress.json"
+  },
+  "devDependencies": {
+    "cypress": "^10.0.1"
+  },
+  "dependencies": {
+    "@synthetixio/synpress": "^1.2.0",
+    "env-cmd": "^10.1.0"
+  }
+}
