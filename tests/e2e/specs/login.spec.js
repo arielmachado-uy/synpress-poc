@@ -1,5 +1,5 @@
 describe('Test User Login', () => {
-    it('Connects with Metamask', () => {
+    it('Switching tabs between Cypress and Metamask', () => {
         // Switching to Metamask tab
         cy.switchToMetamaskWindow();
 
@@ -15,9 +15,9 @@ describe('Test User Login', () => {
             expect(response).to.be.false;
         })
 
-        // Switching to Cypress tab
+       // Switching to Cypress tab
         cy.switchToCypressWindow();
-
+ 
         // Validate Cypress window is active
         cy.isCypressWindowActive()
         .then(response => {
@@ -29,7 +29,9 @@ describe('Test User Login', () => {
         .then(response => {
             expect(response).to.be.false;
         })
-        
+    })
+    
+    it('Connects with Metamask', () => {
         // Visit trade site
         cy.visit('https://flooz.trade/')
         // Accept cookies
@@ -40,11 +42,7 @@ describe('Test User Login', () => {
         cy.get('button[class*="profile-page-connect__connect-btn"]').should('be.visible').click();
         cy.get('button').contains('MetaMask').should('be.visible').click();
 
-	    // Connect to dapp
-        // cy.switchToMetamaskWindow();
+	    // Connect to dApp
         cy.acceptMetamaskAccess().should("be.true");
-        // cy.confirmMetamaskSignatureRequest(); <= Need to learn more about it, failing right now
-	    // switch back to cypress window (your dApp)
-        // cy.switchToCypressWindow();
     })
   })
