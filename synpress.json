@@ -1,5 +1,5 @@
 {
-  "baseUrl": "https://flooz.trade/",
+  "baseUrl": "https://www.getfrontrunner.com/",
   "userAgent": "synpress",
   "retries": { "runMode": 0, "openMode": 0 },
   "integrationFolder": "tests/e2e/specs",
@@ -14,10 +14,12 @@
     "testFiles": "**/*spec.{js,jsx,ts,tsx}"
   },
   "env": {
-    "coverage": false
+    "coverage": false,
+    "MAILSLURP_API_KEY": "570c36c5785baf421799f93efca729fa310d7d99e5eab51b2d34f0a02cda8599"
   },
   "defaultCommandTimeout": 30000,
   "pageLoadTimeout": 30000,
   "requestTimeout": 30000,
+  "responseTimeout": 30000,
   "supportFile": "tests/support/index.js"
 }

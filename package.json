@@ -6,12 +6,12 @@
   "author": "Ariel Machado <arielma77@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "env-cmd -f .env npx synpress run -ne -cf synpress.json --config supportFile='tests/support/index.js'",
-    "open": "env-cmd -f .env npx synpress open -cf synpress.json"
+    "test": "env-cmd -f .env npx synpress run -ne -cf synpress.json --config supportFile='tests/support/index.js'"
   },
   "devDependencies": {
     "@testing-library/cypress": "^8.0.3",
-    "cypress": "^10.0.1"
+    "cypress": "^10.0.1",
+    "cypress-mailslurp": "^1.5.0"
   },
   "dependencies": {
     "@synthetixio/synpress": "^1.2.0",
